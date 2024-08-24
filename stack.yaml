@@ -1,8 +1,11 @@
-resolver: lts-18.28
+resolver: lts-22.11
+# Always keep `compiler` explicit because it's used by the Dockerfile to
+# optimize both build time and intermediate image size
+compiler: ghc-9.6.4
 
 packages:
 - selda
-- selda-postgresql
+# - selda-postgresql
 - selda-sqlite
 - selda-tests
 - selda-json
